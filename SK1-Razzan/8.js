@@ -11,4 +11,4 @@ for (let i = 1; i < menu.length; i++) {
   }
 }
 
-console.log("Jumlah kata paling sedikit " + jumlah + " yaitu " + min);
+alert("Jumlah kata paling sedikit " + jumlah + " yaitu " + min);
