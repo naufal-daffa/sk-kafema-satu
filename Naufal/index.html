@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let email = prompt("Masukkan email anda", "")
+      try {
+        if (email == "") {
+          throw "Error1";
+        } else if (!email.includes("@")) {
+          throw "Error2";
+        } else if (!/\.[^\s@]+$/.test(email)) {
+          throw "Error3";
+        } else if (email.includes(" ")){
+          throw "Error 4"
+        }else{
+          alert("Email Valid")
+        }
+      } catch (err) {
+        if (err == "Error1") {
+          alert("Error! email tidak boleh kosong");
+        }
+        if (err == "Error2") {
+          alert("Error! format email tidak valid");
+        }
+        if (err == "Error3") {
+          alert("Error! domain email tidak valid");
+        }
+        if(err == "Error 4"){
+          alert("Error! email tidak boleh mengandung spasi")
+        }
+      }
+      
+    </script>
+  </body>
+</html>

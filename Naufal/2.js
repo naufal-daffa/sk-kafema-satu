@@ -1,3 +1,5 @@
+let nama = "Fema Flamelina Putri"
+
 function ubahNama(nama) {
   let kata = nama.split(" ");
   for (let i = 2; i < kata.length; i++) {
@@ -6,4 +8,4 @@ function ubahNama(nama) {
   return kata.join(" ");
 }
 
-console.log(ubahNama("Fema Flamelina Putri"));
+console.log(ubahNama(nama));
