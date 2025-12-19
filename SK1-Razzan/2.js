@@ -6,4 +6,4 @@ function ubahNama(nama) {
   return kata.join(" ");
 }
 
-console.log(ubahNama("Fema Flamelina Putri"));
+console.log(ubahNama("Fema Flamelina Putri cihuy asoy"));
