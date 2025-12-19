@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        const saldo = 5000000;
+        const limit = 2000000;
+        let penarikan = parseInt(prompt("Masukan jumlah yang ingin di tarik"));
+
+        try {
+          if (penarikan >= limit) {
+            throw "error2";
+          }
+          else if (penarikan >= saldo) {
+            throw "error1";
+
+          } else if (penarikan % 50000 != 0) {
+            throw "error3";
+          }
+          let akhir = saldo - penarikan;
+          alert("Berhasil menarik uang, Saldo anda tersisa" + akhir);
+        } catch (err) {
+          if (err == "error1") {
+            alert(" saldo anda kurang, saldo anda hanya " + saldo);
+          } else if (err == "error2") {
+            alert("Limit penarikan harian hanya Rp." + limit);
+          } else if (err == "error3") {
+            alert("Penarikan harus kelipatan 50.000");
+          }
+        } finally {
+          alert("Silahkan ambil karu anda");
+        }
+    </script>
+  </body>
+</html>
